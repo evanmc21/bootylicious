@@ -22,7 +22,7 @@ class WorkoutForm extends Component {
     const { duration, location, muscle_group, sets, reps, weight, cardio, resistance } = this.props.workoutFormData;
 
     return(
-      <div>
+      <div className="workoutForm">
         add a workout!
         <form onSubmit={this.handleOnSubmit}>
           <div>
