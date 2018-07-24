@@ -18,7 +18,13 @@ const addWorkout = workout => {
   }
 }
 
-//  ** Async Actions **
+const updateWorkout = workout => {
+  return {
+    type: 'EDIT_WORKOUT',
+    workout
+  }
+}
+//  ** Workout Async Actions **
 export const getWorkouts = () => {
   return dispatch => {
     return fetch(`${API_URL}/workouts`)
@@ -41,6 +47,24 @@ export const createWorkout = workout => {
     .then(workout => {
       dispatch(addWorkout(workout))
       dispatch(resetWorkoutForm())
+    })
+    .catch(error => console.log(error))
+  }
+}
+
+export const editWorkout = (workout, routerHistory) => {
+  return dispatch => {
+    return fetch(`${API_URL}/workouts/${workout.id}`, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({workout: workout})
+    })
+    .then(response => response.json())
+    .then(workout => {
+      dispatch(updateWorkout(workout))
+      routerHistory.replace(`/workouts/${workout.id}`)
     })
     .catch(error => console.log(error))
   }

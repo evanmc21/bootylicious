@@ -103,7 +103,7 @@ class WorkoutForm extends Component {
           value={resistance}
           />
           </div>
-          <button type="submit">add workout</button>
+          <button className="button" type="submit">add workout</button>
         </form>
       </div>
     );
