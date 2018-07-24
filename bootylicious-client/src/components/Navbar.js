@@ -1,5 +1,8 @@
 import React from 'react';
 
-const Navbar = () => <div>Navbar is coming soon</div>
+const Navbar = () =>
+<div>
+<button className="nav-button">add workout</button>
+</div>
 
 export default Navbar;
