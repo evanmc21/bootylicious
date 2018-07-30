@@ -39,3 +39,12 @@
 .workoutForm:hover {
   box-shadow: 0 14px 28px rgba(0,10,150,0.25), 0 10px 10px rgba(0,10,150,0.22);
 }
+
+.workoutShow-card {
+  float: left;
+  margin: 1.5%;
+  background: #ABFFD1;
+  color: navy;
+  width: 30%;
+  height: 20%;
+}
