@@ -16,6 +16,8 @@ class WorkoutShow extends Component {
         <p> weight (lbs): {workout.weight} </p>
         <p> sets: {workout.sets}</p>
         <p> reps: {workout.reps}</p>
+        <p> cardio: {workout.cardio}</p>
+        <p> resistance: {workout.resistance}</p>
         <h4> make an edit to your bootylicious workout </h4>
         <Link key={workout.id} to={`/workouts/${workout.id}/edit`}>
         <button type="button"> edit workout </button>
@@ -27,7 +29,7 @@ class WorkoutShow extends Component {
 
   const mapStateToProps = (state, ownProps) => {
     const id = +ownProps.match.params.workoutId
-    const workout = state.workouts.workouts.find(workout => workout.id === id) || {}
+    const workout = state.workouts.find(workout => workout.id === id) || {}
     return ({
       workout: workout
     })
