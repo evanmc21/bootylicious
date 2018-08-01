@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Workouts from './Workouts';
+import { connect } from 'react-redux'
 // import Comment from '../components/Comment';
 import './App.css';
 import WorkoutShow from './WorkoutShow';
