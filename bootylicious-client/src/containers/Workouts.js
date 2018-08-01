@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import WorkoutCard from '../components/WorkoutCard';
-import WorkoutForm from './WorkoutForm';
+// import WorkoutForm from './WorkoutForm';
 import { getWorkouts } from '../actions/workouts';
 import './Workouts.css';
 
@@ -17,7 +17,6 @@ class Workouts extends Component {
         <h1>Workouts</h1>
         {this.props.workouts.map(workout => <WorkoutCard key={workout.id} workout=
         {workout}/>)}
-        <WorkoutForm />
       </div>
     );
   }

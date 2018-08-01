@@ -17,8 +17,8 @@ class WorkoutEdit extends Component {
       reps: this.props.workout.reps,
       weight: this.props.workout.weight
     };
-    // this.handleOnChange = this.handleOnChange.bind(this)
-    this.handleOnSubmit = this.handleOnSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    // this.handleOnSubmit = this.handleOnSubmit.bind(this)
   }
 
   handleChange = event => {
@@ -42,78 +42,78 @@ class WorkoutEdit extends Component {
           <label htmlFor="duration">duration (minutes):</label>
           <input
           type="number"
-          onChange={this.handleOnChange}
           name="duration"
           placeholder="be honest"
-          value={this.state.duration}
+          defaultValue={this.state.duration}
+          onChange={this.handleOnChange}
           />
           </div>
           <div>
           <label htmlFor="location">location:</label>
           <input
           type="text"
-          onChange={this.handleOnChange}
           name="location"
           placeholder="neverland"
-          value={this.state.location}
+          defaultValue={this.state.location}
+          onChange={this.handleOnChange}
           />
           </div>
           <div>
           <label htmlFor="muscle_group">muscle group:</label>
           <input
           type="text"
-          onChange={this.handleOnChange}
           name="muscle_group"
           placeholder="glutes"
-          value={this.state.muscle_group}
+          defaultValue={this.state.muscle_group}
+          onChange={this.handleOnChange}
           />
           </div>
           <div>
           <label htmlFor="sets">sets:</label>
           <input
           type="number"
-          onChange={this.handleOnChange}
           name="sets"
           placeholder="be honest"
-          value={this.state.sets}
+          defaultValue={this.state.sets}
+          onChange={this.handleOnChange}
           />
           </div>
           <div>
           <label htmlFor="reps">reps:</label>
           <input
           type="number"
-          onChange={this.handleOnChange}
           name="reps"
           placeholder="be honest"
-          value={this.state.reps}
+          defaultValue={this.state.reps}
+          onChange={this.handleOnChange}
           />
           </div>
           <div>
           <label htmlFor="weight">weight:</label>
           <input
           type="number"
-          onChange={this.handleOnChange}
           name="weight"
           placeholder="be honest"
-          value={this.state.weight}
+          defaultValue={this.state.weight}
+          onChange={this.handleOnChange}
           />
           </div>
           <div>
           <label htmlFor="cardio">cardio:</label>
           <input
           type="checkBox"
-          onChange={this.handleOnChange}
           name="cardio"
-          value={this.state.cardio}
+          defaultValue={this.state.cardio}
+          onChange={this.handleOnChange}
           />
           </div>
           <div>
           <label htmlFor="resistance">resistance training?:</label>
           <input
           type="checkBox"
-          onChange={this.handleOnChange}
           name="resistance"
-          value={this.state.resistance}
+          defaultValue={this.state.resistance}
+          onChange={this.handleOnChange}
           />
           </div>
           <button className="button" type="submit">breakaway</button>
@@ -124,7 +124,7 @@ class WorkoutEdit extends Component {
 }
 
   const mapStateToProps = (state, ownProps) => {
-    const workout = state.workouts.find(workout => workout.id === parseInt(ownProps.match.params.workoutId))
+    const workout = state.workouts.find(workout => workout.id)
     if (workout) {
       return {workout: workout}
     } else {

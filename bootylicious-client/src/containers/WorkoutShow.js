@@ -3,8 +3,15 @@ import { connect } from 'react-redux';
 import { editWorkout } from '../actions/workouts';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
+import { getWorkouts } from '../actions/workouts';
 
 class WorkoutShow extends Component {
+
+  componentDidMount() {
+    this.props.getWorkouts()
+  }
+
+
   render() {
     const { workout } = this.props;
       return (
@@ -18,7 +25,7 @@ class WorkoutShow extends Component {
         <p> reps: {workout.reps}</p>
         <p> cardio: {workout.cardio}</p>
         <p> resistance: {workout.resistance}</p>
-        <h4> make an edit to your bootylicious workout </h4>
+        <h4> make an edit to your workout </h4>
         <Link key={workout.id} to={`/workouts/${workout.id}/edit`}>
         <button type="button"> edit workout </button>
           </Link>
@@ -37,7 +44,7 @@ class WorkoutShow extends Component {
 
   const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
-      editWorkout
+      editWorkout, getWorkouts
     }, dispatch);
   }
 
