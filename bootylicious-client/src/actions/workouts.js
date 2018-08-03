@@ -79,7 +79,7 @@ export const editWorkout = (workout, routerHistory) => {
     .then(response => response.json())
     .then(workout => {
       dispatch(updateWorkout(workout))
-      routerHistory.replace(`/workouts/${workout.id}`)
+      // routerHistory.replace(`/workouts/${workout.id}`)
     })
     .catch(error => console.log(error))
   }

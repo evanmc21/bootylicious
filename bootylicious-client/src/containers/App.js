@@ -3,6 +3,10 @@ import Workouts from './Workouts';
 import { connect } from 'react-redux'
 // import Comment from '../components/Comment';
 import './App.css';
+import { editWorkout } from '../actions/workouts';
+import { getWorkouts } from '../actions/workouts';
+import { createWorkout } from '../actions/workouts';
+import { bindActionCreators } from 'redux';
 import WorkoutShow from './WorkoutShow';
 import WorkoutEdit from './WorkoutEdit';
 import WorkoutForm from './WorkoutForm';
@@ -31,4 +35,16 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return ({
+    workouts: state.workouts
+  })
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    editWorkout, getWorkouts, createWorkout
+  }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

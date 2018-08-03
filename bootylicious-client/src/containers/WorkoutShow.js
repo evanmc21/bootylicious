@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { editWorkout } from '../actions/workouts';
+// import { editWorkout } from '../actions/workouts';
 import { Link } from 'react-router-dom';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import { getWorkouts } from '../actions/workouts';
 
 class WorkoutShow extends Component {
-
+  constructor(props){
+    super(props)
+    this.state = {
+      workout: {}
+    }
+  }
   componentDidMount() {
-    this.props.getWorkouts()
+    this.props.getWorkouts();
   }
 
 
@@ -42,10 +47,10 @@ class WorkoutShow extends Component {
     })
   }
 
-  const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({
-      editWorkout, getWorkouts
-    }, dispatch);
-  }
+  // const mapDispatchToProps = (dispatch) => {
+  //   return bindActionCreators({
+  //     editWorkout, getWorkouts
+  //   }, dispatch);
+  // }
 
-  export default connect(mapStateToProps, mapDispatchToProps)(WorkoutShow);
+  export default connect(mapStateToProps, { getWorkouts })(WorkoutShow);
