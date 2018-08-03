@@ -47,10 +47,4 @@ class WorkoutShow extends Component {
     })
   }
 
-  // const mapDispatchToProps = (dispatch) => {
-  //   return bindActionCreators({
-  //     editWorkout, getWorkouts
-  //   }, dispatch);
-  // }
-
   export default connect(mapStateToProps, { getWorkouts })(WorkoutShow);
