@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { editWorkout } from '../actions/workouts';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 
 class WorkoutEdit extends Component {
   constructor(props){
@@ -18,7 +18,7 @@ class WorkoutEdit extends Component {
       weight: this.props.workout.weight
     };
     this.handleChange = this.handleChange.bind(this)
-    // this.handleOnSubmit = this.handleOnSubmit.bind(this)
+    this.handleOnSubmit = this.handleOnSubmit.bind(this)
   }
 
   handleChange = event => {
@@ -123,19 +123,19 @@ class WorkoutEdit extends Component {
   }
 }
 
-  const mapStateToProps = (state, ownProps) => {
-    const workout = state.workouts.find(workout => workout.id)
-    if (workout) {
-      return {workout: workout}
-    } else {
-      return { workout: {}};
-    }
-  };
+const mapStateToProps = (state, ownProps) => {
+  const workout = state.workouts.find(workout => workout.id === parseInt(ownProps.match.params.workoutId))
+  if (workout) {
+    return {workout: workout}
+  } else {
+  return { workout: {}}
+  }
+};
 
-  const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({
-      editWorkout: editWorkout
-    }, dispatch);
-  };
+  // const mapDispatchToProps = (dispatch) => {
+  //   return bindActionCreators({
+  //     editWorkout: editWorkout
+  //   }, dispatch);
+  // };
 
-export default connect(mapStateToProps, mapDispatchToProps)(WorkoutEdit);
+export default connect(mapStateToProps, { editWorkout })(WorkoutEdit);
