@@ -11,7 +11,8 @@ import WorkoutShow from './WorkoutShow';
 import WorkoutEdit from './WorkoutEdit';
 import WorkoutForm from './WorkoutForm';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+import Home from '../components/Home';
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
       <Router>
       <div className="App">
       <Switch>
+      <Route exact path='/' component = {Home} />
       <Route exact path='/workouts' component = {Workouts} />
       <Route exact path='/workouts/new' component = {WorkoutForm} />
       <Route exact path='/workouts/:workoutId' component = {WorkoutShow} />

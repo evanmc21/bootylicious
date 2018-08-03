@@ -1,8 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () =>
-<div>
-<button className="nav-button">add workout</button>
+  <div className="navbar-container">
+    <NavLink className="nav-item" to="/workouts/new">add workout</NavLink>
+    <NavLink className="nav-item" to="/workouts">view workouts</NavLink>
 </div>
 
 export default Navbar;

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: white;
+  background: grey;
   color: navy;
 }
 
@@ -9,15 +9,17 @@
   height: 80px;
 }
 
-.App-header {
+/* .App-header {
   background-color: #222;
   height: 50px;
   padding: 10px;
   color: white;
-}
+} */
 
 .App-title {
   font-size: 1.5em;
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
 }
 
 .App-intro {
@@ -40,20 +42,27 @@
   opacity:1;
 }
 
-.Navbar {
-  padding-top: 20px;
-  text-align: center;
-}
+.navbar-container {
+  width: 100%;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  text-align: left;
+  margin: 15px;
+ }
 
-.nav-button {
-  background-color: grey;
-  font-size: 20px;
-  color: white;
-  padding: 15px 15px;
-  opacity: 0.5;
-  font-family: 'Raleway', sans-serif;
-}
+ .nav-item {
+   /* margin-right: 0px; */
+   /* padding: 0 30px; */
+   margin: 5px;
+   opacity: 0.5;
+   color: pink;
+   font-weight: 600;
+   text-decoration: none;
+   font-family: 'Raleway', sans-serif;
+   font-size: 18px;
+ }
 
-.nav-button:hover {
-  opacity:1;
-}
+ .nav-item:hover {
+   opacity: 1;
+ }
