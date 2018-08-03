@@ -132,10 +132,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 };
 
-  // const mapDispatchToProps = (dispatch) => {
-  //   return bindActionCreators({
-  //     editWorkout: editWorkout
-  //   }, dispatch);
-  // };
-
 export default connect(mapStateToProps, { editWorkout })(WorkoutEdit);
