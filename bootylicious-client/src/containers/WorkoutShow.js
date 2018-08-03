@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { editWorkout } from '../actions/workouts';
 import { Link } from 'react-router-dom';
-// import { bindActionCreators } from 'redux';
 import { getWorkouts } from '../actions/workouts';
 
 class WorkoutShow extends Component {
