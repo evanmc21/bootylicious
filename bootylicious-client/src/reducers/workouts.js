@@ -10,7 +10,7 @@ export default (state = [], action) => {
       return state;
 
     case 'EDIT_WORKOUT':
-      return state.concat(action.workout);
+    return state.concat(action.workout);
 
       default:
         return state;

@@ -10,6 +10,7 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
+  debugger
 
   switch(action.type) {
     case 'UPDATED_DATA':
