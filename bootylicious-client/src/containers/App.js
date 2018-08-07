@@ -35,6 +35,7 @@ class App extends Component {
           <Route exact path='/workouts/:workoutId' component = {WorkoutShow} />
           <Route exact path='/workouts/:workoutId/edit' component = {WorkoutEdit} />
         </Switch>
+        <Footer />
         </div>
       </Router>
     );
