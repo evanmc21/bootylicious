@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
         <NavLink className="nav-item" to="/workouts/new">add workout</NavLink>
         <NavLink className="nav-item" to="/workouts">workouts</NavLink>
         <NavLink className="nav-item" to="/">home</NavLink>
+        <NavLink className="nav-item" to="/about">about</NavLink>
       </div>
     )
 }

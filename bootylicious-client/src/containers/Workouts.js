@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import WorkoutCard from '../components/WorkoutCard';
 // import WorkoutForm from './WorkoutForm';
 import { getWorkouts } from '../actions/workouts';
