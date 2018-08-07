@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import Workouts from './Workouts';
 import { connect } from 'react-redux'
-// import Comment from '../components/Comment';
 import './App.css';
 import { editWorkout } from '../actions/workouts';
 import { getWorkouts } from '../actions/workouts';
 import { createWorkout } from '../actions/workouts';
+import { getComments } from '../actions/workouts';
+import { createComment } from '../actions/workouts';
+// import { CommentForm } from './CommentForm';
+import { updateWorkoutFormData } from '../actions/workoutForm';
 import { bindActionCreators } from 'redux';
 import WorkoutShow from './WorkoutShow';
 import WorkoutEdit from './WorkoutEdit';
@@ -45,7 +48,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    editWorkout, getWorkouts, createWorkout
+    editWorkout, getWorkouts, createWorkout, updateWorkoutFormData, getComments, createComment
   }, dispatch);
 };
 

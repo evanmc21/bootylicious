@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { editWorkout } from '../actions/workouts';
@@ -17,11 +18,11 @@ class WorkoutEdit extends Component {
       reps: this.props.workout.reps,
       weight: this.props.workout.weight
     };
-    this.handleChange = this.handleChange.bind(this)
+    this.handleOnChange = this.handleOnChange.bind(this)
     this.handleOnSubmit = this.handleOnSubmit.bind(this)
   }
 
-  handleChange = event => {
+  handleOnChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -103,7 +104,7 @@ class WorkoutEdit extends Component {
           <input
           type="checkBox"
           name="cardio"
-          defaultValue={this.state.cardio}
+          checked={this.state.cardio}
           onChange={this.handleOnChange}
           />
           </div>
@@ -124,6 +125,7 @@ class WorkoutEdit extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
   const workout = state.workouts.find(workout => workout.id === parseInt(ownProps.match.params.workoutId))
   if (workout) {
     return {workout: workout}
@@ -132,4 +134,10 @@ const mapStateToProps = (state, ownProps) => {
   }
 };
 
-export default connect(mapStateToProps, { editWorkout })(WorkoutEdit);
+// const mapDispatchToProps = (dispatch) => {
+//   return bindActionCreators({
+//     editWorkout: editWorkout
+//   }, dispatch)
+// }
+
+export default connect(mapStateToProps, {editWorkout})(WorkoutEdit);

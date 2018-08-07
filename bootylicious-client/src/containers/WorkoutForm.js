@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { updateWorkoutFormData } from '../actions/workoutForm';
 import { createWorkout } from '../actions/workouts';
 
@@ -110,7 +109,7 @@ class WorkoutForm extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     workoutFormData: state.workoutFormData
   }

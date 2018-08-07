@@ -1,13 +1,13 @@
-.App {
+ .App {
   text-align: center;
-  background: grey;
   color: lightblue;
+  font-family: 'Raleway', sans-serif;
 }
 
 .App-title {
   font-size: 1.5em;
   font-family: 'Raleway', sans-serif;
-  /* background-color: white; */
+  background: grey;
 }
 
 
