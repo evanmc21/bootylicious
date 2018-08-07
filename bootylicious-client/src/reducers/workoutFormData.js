@@ -1,3 +1,4 @@
+// import { REHYDRATE } from 'redux-persist/constants'
 const initialState = {
   location: '',
   duration: 0,
@@ -10,9 +11,10 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
-  debugger
-
   switch(action.type) {
+    // case REHYDRATE:
+    //   return {...state, workout: action.workoutFormData
+    //   }
     case 'UPDATED_DATA':
       return action.workoutFormData
 

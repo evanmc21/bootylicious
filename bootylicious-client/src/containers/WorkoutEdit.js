@@ -125,7 +125,6 @@ class WorkoutEdit extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   const workout = state.workouts.find(workout => workout.id === parseInt(ownProps.match.params.workoutId))
   if (workout) {
     return {workout: workout}
@@ -134,10 +133,5 @@ const mapStateToProps = (state, ownProps) => {
   }
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//   return bindActionCreators({
-//     editWorkout: editWorkout
-//   }, dispatch)
-// }
 
 export default connect(mapStateToProps, {editWorkout})(WorkoutEdit);
