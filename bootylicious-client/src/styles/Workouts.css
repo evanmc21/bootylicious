@@ -25,9 +25,10 @@
     height: 50%;
     border: 1.5px solid lightgrey;
     padding: 10px; */
-    float: left;
+    /* float: left; */
     margin: 1.5%;
     /* border: 1.5px solid lightgrey; */
+    text-align: center;
     background: silver;
     color: #ABFFD1;
     width: 30%;
