@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import WorkoutCard from '../components/WorkoutCard';
 // import WorkoutForm from './WorkoutForm';
 import { getWorkouts } from '../actions/workouts';
-import './Workouts.css';
+import '../styles/Workouts.css';
 
 class Workouts extends Component {
 

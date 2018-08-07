@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Workouts from './Workouts';
 import { connect } from 'react-redux'
-import './App.css';
+import '../styles/App.css';
 import { editWorkout } from '../actions/workouts';
 import { getWorkouts } from '../actions/workouts';
 import { createWorkout } from '../actions/workouts';
@@ -16,6 +16,7 @@ import WorkoutForm from './WorkoutForm';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Home from '../components/Home';
+import Footer from '../components/Footer';
 
 class App extends Component {
 
