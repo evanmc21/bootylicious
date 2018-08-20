@@ -7,7 +7,8 @@ const initialState = {
   muscle_group: '',
   weight: 0,
   cardio: '',
-  resistance: ''
+  resistance: '',
+  count: 0
 }
 
 export default (state = initialState, action) => {
