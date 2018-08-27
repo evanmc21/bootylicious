@@ -20,10 +20,10 @@ class WorkoutShow extends Component {
       return (
 
         <div className="workoutShow-card">
-        <p> date: {workout.date}</p>
+        <h1> date: {workout.date}</h1>
         <p>location: {workout.location}</p>
         <p> exercise: {workout.exercise}</p>
-        <h1>{workout.muscle_group}</h1>
+        <p>{workout.muscle_group}</p>
         <p> duration (minutes): {workout.duration}</p>
         <p> weight (lbs): {workout.weight} </p>
         <p> sets: {workout.sets}</p>
@@ -33,6 +33,7 @@ class WorkoutShow extends Component {
         <Link key={workout.id} to={`/workouts/${workout.id}/edit`}>
         <button type="button"> edit workout </button>
           </Link>
+
         </div>
       )
   }
