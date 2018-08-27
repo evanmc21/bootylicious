@@ -1,0 +1,17 @@
+ROUTES
+#GET /api/workouts (see a list of workouts)
+#GET /api/workout/:id (see an individual workout)
+#POST /api/workout (create workout)
+#PUT /api/workout/:id (update workout)
+#Delete /api/workout/:id
+
+
+WORKOUT MODEL
+#location
+#muscle_group
+#duration
+#sets
+#reps
+#weight
+#cardio
+#resistance
