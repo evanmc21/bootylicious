@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Persist } from 'react-persist';
+import { Link } from 'react-router-dom';
 
 class WorkoutCard extends Component {
   constructor(props){
@@ -45,13 +46,17 @@ const updateWorkout = workout => {
         <p> reps: {workout.reps}</p>
         <p> notes: {workout.note}</p>
         <p>{this.state.count}</p>
-        <button className="button" onClick={this.onClick}>like</button>
+        <button className="button" onClick={this.onClick}>like</button><br></br>
         <Persist
         name="workout"
         data={this.state}
         debounce={500}
         onMount={data => this.setState(data)}
         />
+        <br></br>
+        <Link key={workout.id} to={`/workouts/${workout.id}`}>
+        <button className="button" type="button"> view workout </button>
+          </Link>
     </div>
     )
   }
