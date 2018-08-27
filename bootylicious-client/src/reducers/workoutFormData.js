@@ -6,8 +6,6 @@ const initialState = {
   reps: 0,
   muscle_group: '',
   weight: 0,
-  cardio: '',
-  resistance: '',
   count: 0,
   note: '',
   date: '',
