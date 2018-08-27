@@ -8,7 +8,8 @@ const initialState = {
   weight: 0,
   cardio: '',
   resistance: '',
-  count: 0
+  count: 0,
+  note: ''
 }
 
 export default (state = initialState, action) => {

@@ -67,7 +67,7 @@ export const createWorkout = workout => {
   }
 }
 
-export const editWorkout = (workout, routerHistory) => {
+export const editWorkout = workout => {
   return dispatch => {
     return fetch(`${API_URL}/workouts/${workout.id}`, {
       method: "PATCH",
@@ -83,6 +83,7 @@ export const editWorkout = (workout, routerHistory) => {
     .catch(error => console.log(error))
   }
 }
+
 
 // export const getComments = (workoutId) => {
 //   return dispatch => {
