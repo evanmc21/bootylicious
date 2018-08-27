@@ -9,7 +9,9 @@ const initialState = {
   cardio: '',
   resistance: '',
   count: 0,
-  note: ''
+  note: '',
+  date: '',
+  exercise: ''
 }
 
 export default (state = initialState, action) => {
