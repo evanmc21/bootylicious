@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import { Persist } from 'react-persist';
 
 class WorkoutCard extends Component {
+  constructor(props){
+  super(props);
+
+  this.state = {
+    count: this.props.workout.count
+  }
+}
 
 onClick = event => {
-
 
 const API_URL = process.env.REACT_APP_API_URL;
 const workout = this.props.workout
@@ -16,11 +22,12 @@ const updateWorkout = workout => {
   fetch(`${API_URL}/workouts/${workout.id}`, {
     method: "PATCH",
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({workout: Object.assign(...workout, {count: workout.count + 1})})
+    //body: JSON.stringify({workout: Object.assign(...workout, {count: this.state.count + 1})})
   })
   .then(response => response.json())
-  .then(workout => (updateWorkout(workout))
-  )
+  // .then(workout => (updateWorkout(workout))
+  // )
+  .then(workout => (this.setState({count: this.state.count + 1})))
   .catch(error => console.log(error))
   }
 
@@ -36,7 +43,8 @@ const updateWorkout = workout => {
         <p> reps: {workout.reps}</p>
         <p> cardio?: {workout.cardio}</p>
         <p> resistance training?: {workout.resistance}</p>
-        <p>{this.props.workout.count}</p>
+        <p> notes: {workout.note}</p>
+        <p>{this.state.count}</p>
         <button className="button" onClick={this.onClick}>like</button>
         <Persist
         name="workout"
