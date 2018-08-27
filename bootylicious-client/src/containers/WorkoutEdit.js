@@ -9,11 +9,11 @@ class WorkoutEdit extends Component {
     super(props);
     this.state = {
       id: this.props.workout.id,
+      date: this.props.workout.date,
+      exercise: this.props.workout.exercise,
       location: this.props.workout.location,
       duration: this.props.workout.duration,
       muscle_group: this.props.workout.muscle_group,
-      cardio: this.props.workout.cardio,
-      resistance: this.props.workout.resistance,
       sets: this.props.workout.sets,
       reps: this.props.workout.reps,
       weight: this.props.workout.weight,
@@ -40,6 +40,24 @@ class WorkoutEdit extends Component {
       <div>
         <h3>take a risk, take a chance, make a change:</h3>
         <form onSubmit={this.handleOnSubmit}>
+          <div>
+          <label htmlFor="date">date: </label>
+          <input
+          type="date"
+          onChange={this.handleOnChange}
+          name="date"
+          value={this.state.date}
+          />
+          </div>
+          <div>
+          <label htmlFor="exercise">exercise: </label>
+          <input
+          type="text"
+          onChange={this.handleOnChange}
+          name="exercise"
+          value={this.state.exercise}
+          />
+          </div>
           <div>
           <label htmlFor="duration">duration (minutes):</label>
           <input
