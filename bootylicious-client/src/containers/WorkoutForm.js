@@ -18,12 +18,30 @@ class WorkoutForm extends Component {
     this.props.createWorkout(this.props.workoutFormData)
   }
   render(){
-    const { duration, location, muscle_group, sets, reps, weight, cardio, resistance, note } = this.props.workoutFormData;
+    const { duration, location, muscle_group, sets, reps, weight, cardio, resistance, note, date, exercise } = this.props.workoutFormData;
 
     return(
       <div className="workoutForm">
         add a workout!
         <form onSubmit={this.handleOnSubmit}>
+        <div>
+        <label htmlFor="date">date: </label>
+        <input
+        type="date"
+        onChange={this.handleOnChange}
+        name="date"
+        value={date}
+        />
+        </div>
+        <div>
+        <label htmlFor="exercise">exercise: </label>
+        <input
+        type="text"
+        onChange={this.handleOnChange}
+        name="exercise"
+        value={exercise}
+        />
+        </div>
           <div>
           <label htmlFor="duration">duration (minutes):</label>
           <input
