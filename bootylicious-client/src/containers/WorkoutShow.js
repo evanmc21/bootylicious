@@ -28,6 +28,7 @@ class WorkoutShow extends Component {
         <p> reps: {workout.reps}</p>
         <p> cardio: {workout.cardio}</p>
         <p> resistance: {workout.resistance}</p>
+        <p> note: {workout.note}</p>
         <h4> make an edit to your workout </h4>
         <Link key={workout.id} to={`/workouts/${workout.id}/edit`}>
         <button type="button"> edit workout </button>
