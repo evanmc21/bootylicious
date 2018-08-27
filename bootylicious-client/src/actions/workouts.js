@@ -25,19 +25,6 @@ const updateWorkout = workout => {
   }
 }
 
-// const setComments = comments => {
-//   return {
-//     type: 'GET_COMMENTS',
-//     comments
-//   }
-// }
-//
-// const addComment = comment => {
-//   return {
-//     type: 'ADD_COMMENT',
-//     comment
-//   }
-// }
 //  ** Workout Async Actions **
 export const getWorkouts = () => {
   return dispatch => {
@@ -83,32 +70,3 @@ export const editWorkout = workout => {
     .catch(error => console.log(error))
   }
 }
-
-
-// export const getComments = (workoutId) => {
-//   return dispatch => {
-//     return fetch(`${API_URL}/workouts/${workoutId}/comments`, {
-//       method: "GET",
-//     })
-//     .then(response => response.json())
-//     .then(comments => {
-//       dispatch(setComments(comments))
-//     })
-//     .catch(error => console.log(error));
-//   }
-// }
-//
-// export const createComment = comment => {
-//   return dispatch => {
-//     return fetch(`${API_URL}/workouts/${comment.workoutId}/comments`, {
-//       method: "POST",
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify({comment})
-//     })
-//     .then(response => response.json())
-//     .then(comment => dispatch(addComment(comment)))
-//     .catch(error => console.log(error))
-//   }
-// }
