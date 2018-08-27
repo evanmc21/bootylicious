@@ -16,7 +16,8 @@ class WorkoutEdit extends Component {
       resistance: this.props.workout.resistance,
       sets: this.props.workout.sets,
       reps: this.props.workout.reps,
-      weight: this.props.workout.weight
+      weight: this.props.workout.weight,
+      note: this.props.workout.note
     };
     this.handleOnChange = this.handleOnChange.bind(this)
     this.handleOnSubmit = this.handleOnSubmit.bind(this)
@@ -115,8 +116,17 @@ class WorkoutEdit extends Component {
           name="resistance"
           defaultValue={this.state.resistance}
           onChange={this.handleOnChange}
-          />
+          /><br></br>
           </div>
+          <div>
+          <label htmlFor="note">notes: </label>
+          <input row="5" col="10"
+          type="textarea"
+          onChange={this.handleOnChange}
+          name="note"
+          value={this.state.note}
+          />
+          </div><br></br>
           <button className="button" type="submit">breakaway</button>
         </form>
       </div>

@@ -10,6 +10,8 @@ class Workouts extends Component {
   componentDidMount() {
     this.props.getWorkouts()
   }
+
+
   render(){
     return (
       <div className="WorkoutContainer">
