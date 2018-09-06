@@ -31,7 +31,7 @@ class WorkoutShow extends Component {
         <p> note: {workout.note}</p>
         <h4> make an edit to your workout </h4>
         <Link key={workout.id} to={`/workouts/${workout.id}/edit`}>
-        <button type="button"> edit workout </button>
+        <button className="button"> edit workout </button>
           </Link>
 
         </div>

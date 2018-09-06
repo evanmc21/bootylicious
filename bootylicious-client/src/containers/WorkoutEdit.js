@@ -37,8 +37,8 @@ class WorkoutEdit extends Component {
 
   render(){
     return (
-      <div>
-        <h3>take a risk, take a chance, make a change:</h3>
+      <div className="workoutForm">
+        <h3>take a risk, take a chance, make a change</h3>
         <form onSubmit={this.handleOnSubmit}>
           <div>
           <label htmlFor="date">date: </label>
